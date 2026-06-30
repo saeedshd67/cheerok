@@ -1,0 +1,78 @@
+{
+  "Brand": { "name": "CHEEROK", "tagline": "A literary magazine of fiction, essays & podcast" },
+  "Nav": {
+    "fiction": "Fiction", "essays": "Essays", "podcast": "Podcast",
+    "interviews": "Interviews", "archive": "Archive", "about": "About", "submit": "Submit"
+  },
+  "Home": {
+    "featuredLabel": "Featured Story — Issue One",
+    "latestFiction": "Latest Fiction", "latestEssays": "Latest Essays",
+    "podcastTitle": "Podcast", "featuredInterview": "Featured Interview", "viewAll": "View All",
+    "newsletterTitle": "Newsletter",
+    "newsletterSub": "Receive the latest stories, conversations, and podcasts from Cheerok in your inbox each week.",
+    "newsletterCta": "Subscribe", "newsletterPlaceholder": "Your email address"
+  },
+  "Story": {
+    "byAuthor": "Author", "readingTime": "{minutes} min read",
+    "relatedWorks": "Related Works", "aboutAuthor": "About the Author"
+  },
+  "Section": {
+    "results": "{count} works", "filterAll": "All", "filterFiction": "Fiction",
+    "filterEssay": "Essay", "filterPodcast": "Podcast", "filterInterview": "Interview",
+    "searchPlaceholder": "Search…", "allYears": "All years", "noResults": "No results found.",
+    "prev": "Previous", "next": "Next", "page": "Page {page} of {total}",
+    "episode": "Episode {n}", "duration": "{min} min",
+    "listenOn": "Listen on", "transcript": "Transcript",
+    "publishedIn": "Published in"
+  },
+  "Archive": {
+    "title": "Archive", "sub": "Browse the complete Cheerok archive of fiction, essays, podcasts, and interviews."
+  },
+  "Author": {
+    "worksBy": "Works", "publishedIn": "Published in Cheerok", "since": "Since {year}",
+    "website": "Website", "viewProfile": "View profile"
+  },
+  "About": {
+    "tag": "Independent · Literary · Contemporary · Human-centered", "title": "About Cheerok",
+    "founded": "Founded 2025 · Tehran",
+    "intro": "Cheerok is an independent magazine for short fiction, essays, interviews, and podcast.",
+    "mission": "Cheerok began with a simple idea: a magazine that respects its reader. Not through noise, not through tempting headlines — but through work worth the time it takes to read.",
+    "pillarsTitle": "What We Publish",
+    "p1t": "Fiction", "p1d": "Persian short fiction from new and established voices.",
+    "p2t": "Essays", "p2d": "Personal, thoughtful writing on life, the city, and literature.",
+    "p3t": "Podcast", "p3d": "Audio conversations on writing, reading, and living with words.",
+    "p4t": "Interviews", "p4d": "Long-form conversations with writers, translators, and publishers.",
+    "teamTitle": "Editorial Team",
+    "r1": "Editor-in-Chief", "r2": "Fiction Editor", "r3": "Essays Editor", "r4": "Podcast Producer",
+    "ctaTitle": "Want to write for us?",
+    "ctaSub": "Cheerok is always looking for new voices in fiction, essays, and conversation.",
+    "ctaBtn": "Submit Your Work"
+  },
+  "Submit": {
+    "title": "Submit Your Work",
+    "intro": "Cheerok publishes Persian short fiction and essays. If you have a piece you think belongs here, we'd be glad to read it.",
+    "g1l": "Response Time", "g1v": "4–6 weeks",
+    "g2l": "Simultaneous Submissions", "g2v": "Allowed — please notify us",
+    "g3l": "Payment", "g3v": "A token honorarium for accepted work",
+    "name": "Name", "email": "Email", "bio": "Short Bio",
+    "genre": "Genre", "genreDefault": "Select…",
+    "genreFiction": "Short Fiction", "genreEssay": "Essay", "genreOther": "Other",
+    "workTitle": "Title of Work",
+    "file": "Upload File", "fileHint": "Word or PDF, max 10MB",
+    "fileDrop": "Drag and drop your file, or click to browse",
+    "coverLetter": "Cover Letter", "coverHint": "Optional — anything the editor should know.",
+    "wordsOf": " of 50 words",
+    "submit": "Submit Your Work", "required": "This field is required",
+    "errEmail": "Enter a valid email address", "errGenre": "Please choose an option",
+    "errFile": "Please select a file",
+    "successTitle": "Your submission has been received",
+    "successSub": "Thank you for choosing Cheerok as a home for your work.",
+    "refLabel": "Reference Number", "statusLabel": "Status", "statusPending": "Pending Review",
+    "successNote": "We typically respond within 4–6 weeks.",
+    "again": "Submit another piece"
+  },
+  "Footer": {
+    "sections": "Sections", "magazine": "Magazine", "follow": "Follow",
+    "rights": "All rights reserved."
+  }
+}

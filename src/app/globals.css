@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/*
+  Design tokens, lifted directly from the static HTML prototypes
+  (cheerok-homepage.html etc.) so the built site matches them exactly
+  rather than drifting toward generic Tailwind defaults.
+*/
+@theme {
+  --color-ink: #0f0f0f;
+  --color-ink-2: #2d2d2d;
+  --color-smoke: #595959;
+  --color-silver: #9a9a9a;
+  --color-line: #dcdcdc;
+  --color-line-2: #eaeae8;
+  --color-surf: #f7f6f4;
+
+  --font-fa: "Vazirmatn", sans-serif;
+  --font-en: "Inter", sans-serif;
+
+  --breakpoint-3xl: 1440px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* RTL is the default per the brief (Persian-first); English pages set dir="ltr" in layout. */
+[dir="ltr"] .icon-flip {
+  transform: scaleX(-1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
