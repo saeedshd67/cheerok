@@ -192,10 +192,14 @@ export async function getEssayBySlug(slug: string): Promise<StoryOrEssay | null>
 }
 
 export async function getAllEssaySlugs(): Promise<string[]> {
-  const res = await strapiFetch<StrapiCollectionResponse<any>>(
-    `/essays?filters[status][$eq]=published&fields[0]=slug&pagination[limit]=-1`
-  );
-  return res.data.map((e) => e.attributes.slug);
+  try {
+    const res = await strapiFetch<StrapiCollectionResponse<any>>(
+      `/essays?filters[status][$eq]=published&fields[0]=slug&pagination[limit]=-1`
+    );
+    return res.data.map((e) => e.attributes.slug);
+  } catch {
+    return [];
+  }
 }
 
 /** Podcast episodes. */
@@ -217,10 +221,14 @@ export async function getPodcastBySlug(slug: string): Promise<PodcastEpisode | n
 }
 
 export async function getAllPodcastSlugs(): Promise<string[]> {
-  const res = await strapiFetch<StrapiCollectionResponse<any>>(
-    `/podcast-episodes?filters[status][$eq]=published&fields[0]=slug&pagination[limit]=-1`
-  );
-  return res.data.map((e) => e.attributes.slug);
+  try {
+    const res = await strapiFetch<StrapiCollectionResponse<any>>(
+      `/podcast-episodes?filters[status][$eq]=published&fields[0]=slug&pagination[limit]=-1`
+    );
+    return res.data.map((e) => e.attributes.slug);
+  } catch {
+    return [];
+  }
 }
 
 /** Interviews. */
@@ -242,10 +250,14 @@ export async function getInterviewBySlug(slug: string): Promise<Interview | null
 }
 
 export async function getAllInterviewSlugs(): Promise<string[]> {
-  const res = await strapiFetch<StrapiCollectionResponse<any>>(
-    `/interviews?filters[status][$eq]=published&fields[0]=slug&pagination[limit]=-1`
-  );
-  return res.data.map((e) => e.attributes.slug);
+  try {
+    const res = await strapiFetch<StrapiCollectionResponse<any>>(
+      `/interviews?filters[status][$eq]=published&fields[0]=slug&pagination[limit]=-1`
+    );
+    return res.data.map((e) => e.attributes.slug);
+  } catch {
+    return [];
+  }
 }
 
 /** Story detail page. Returns null on 404 so the page can call notFound(). */
@@ -260,10 +272,14 @@ export async function getStoryBySlug(slug: string): Promise<StoryOrEssay | null>
 
 /** generateStaticParams source for /dastan/[slug] at build time. */
 export async function getAllStorySlugs(): Promise<string[]> {
-  const res = await strapiFetch<StrapiCollectionResponse<any>>(
-    `/stories?filters[status][$eq]=published&fields[0]=slug&pagination[limit]=-1`
-  );
-  return res.data.map((e) => e.attributes.slug);
+  try {
+    const res = await strapiFetch<StrapiCollectionResponse<any>>(
+      `/stories?filters[status][$eq]=published&fields[0]=slug&pagination[limit]=-1`
+    );
+    return res.data.map((e) => e.attributes.slug);
+  } catch {
+    return [];
+  }
 }
 
 export async function getAuthorBySlug(slug: string): Promise<Author | null> {
@@ -276,10 +292,14 @@ export async function getAuthorBySlug(slug: string): Promise<Author | null> {
 }
 
 export async function getAllAuthorSlugs(): Promise<string[]> {
-  const res = await strapiFetch<StrapiCollectionResponse<any>>(
-    `/authors?filters[status][$eq]=active&fields[0]=slug&pagination[limit]=-1`
-  );
-  return res.data.map((e) => e.attributes.slug);
+  try {
+    const res = await strapiFetch<StrapiCollectionResponse<any>>(
+      `/authors?filters[status][$eq]=active&fields[0]=slug&pagination[limit]=-1`
+    );
+    return res.data.map((e) => e.attributes.slug);
+  } catch {
+    return [];
+  }
 }
 
 /**
