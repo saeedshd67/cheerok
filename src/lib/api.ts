@@ -338,12 +338,13 @@ export async function searchArchive(params: {
   page?: number;
   pageSize?: number;
 }): Promise<PaginatedResult<ContentPiece>> {
-  const collectionsToQuery: { type: ContentPiece["type"]; path: string; normalize: (e: StrapiEntry<any>) => ContentPiece }[] = [
+  const ALL_COLLECTIONS: { type: ContentPiece["type"]; path: string; normalize: (e: StrapiEntry<any>) => ContentPiece }[] = [
     { type: "fiction", path: "stories", normalize: (e) => normalizeStoryOrEssay(e, "fiction") },
     { type: "essay", path: "essays", normalize: (e) => normalizeStoryOrEssay(e, "essay") },
     { type: "podcast", path: "podcast-episodes", normalize: normalizePodcastEpisode },
     { type: "interview", path: "interviews", normalize: normalizeInterview },
-  ].filter((c) => !params.type || c.type === params.type);
+  ];
+  const collectionsToQuery = ALL_COLLECTIONS.filter((c) => !params.type || c.type === params.type);
 
   const qs = new URLSearchParams();
   qs.set("filters[status][$eq]", "published");
