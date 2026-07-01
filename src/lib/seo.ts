@@ -42,7 +42,10 @@ export function buildAlternates(
   currentLocale: string,
   faPath: string,
   enPath: string
-): Record<string, string> {
+): {
+  canonical: string;
+  languages: Record<string, string>;
+} {
   return {
     canonical: canonical(currentLocale, currentLocale === "fa" ? faPath : enPath),
     languages: {
