@@ -1,19 +1,20 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import type { AppPathnames } from "@/i18n/routing";
 
-const SECTION_LINKS: { href: AppPathnames; key: string }[] = [
+const SECTION_LINKS = [
   { href: "/dastan", key: "fiction" },
   { href: "/jostar", key: "essays" },
   { href: "/podcast", key: "podcast" },
   { href: "/goftogoo", key: "interviews" },
   { href: "/arshiv", key: "archive" },
-];
+] as const;
 
-const MAGAZINE_LINKS: { href: AppPathnames; key: string }[] = [
+const MAGAZINE_LINKS = [
   { href: "/darbare", key: "about" },
   { href: "/ersal", key: "submit" },
-];
+] as const;
+
+type FooterLink = (typeof SECTION_LINKS)[number] | (typeof MAGAZINE_LINKS)[number];
 
 const SOCIAL_LINKS = [
   { label: "اینستاگرام", labelEn: "Instagram", href: "#" },
@@ -69,7 +70,7 @@ function FooterColumn({
   items,
 }: {
   titleKey: string;
-  items: { href: AppPathnames; key: string }[];
+  items: readonly FooterLink[];
 }) {
   const t = useTranslations();
   return (
